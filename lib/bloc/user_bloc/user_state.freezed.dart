@@ -16,7 +16,7 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$UserState {
-  UserModel? get user => throw _privateConstructorUsedError;
+  User? get user => throw _privateConstructorUsedError;
   bool? get isLoading => throw _privateConstructorUsedError;
   String? get authMethod => throw _privateConstructorUsedError;
 
@@ -30,9 +30,9 @@ abstract class $UserStateCopyWith<$Res> {
   factory $UserStateCopyWith(UserState value, $Res Function(UserState) then) =
       _$UserStateCopyWithImpl<$Res, UserState>;
   @useResult
-  $Res call({UserModel? user, bool? isLoading, String? authMethod});
+  $Res call({User? user, bool? isLoading, String? authMethod});
 
-  $UserModelCopyWith<$Res>? get user;
+  $UserCopyWith<$Res>? get user;
 }
 
 /// @nodoc
@@ -56,7 +56,7 @@ class _$UserStateCopyWithImpl<$Res, $Val extends UserState>
       user: freezed == user
           ? _value.user
           : user // ignore: cast_nullable_to_non_nullable
-              as UserModel?,
+              as User?,
       isLoading: freezed == isLoading
           ? _value.isLoading
           : isLoading // ignore: cast_nullable_to_non_nullable
@@ -70,12 +70,12 @@ class _$UserStateCopyWithImpl<$Res, $Val extends UserState>
 
   @override
   @pragma('vm:prefer-inline')
-  $UserModelCopyWith<$Res>? get user {
+  $UserCopyWith<$Res>? get user {
     if (_value.user == null) {
       return null;
     }
 
-    return $UserModelCopyWith<$Res>(_value.user!, (value) {
+    return $UserCopyWith<$Res>(_value.user!, (value) {
       return _then(_value.copyWith(user: value) as $Val);
     });
   }
@@ -89,10 +89,10 @@ abstract class _$$UserStateImplCopyWith<$Res>
       __$$UserStateImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({UserModel? user, bool? isLoading, String? authMethod});
+  $Res call({User? user, bool? isLoading, String? authMethod});
 
   @override
-  $UserModelCopyWith<$Res>? get user;
+  $UserCopyWith<$Res>? get user;
 }
 
 /// @nodoc
@@ -114,7 +114,7 @@ class __$$UserStateImplCopyWithImpl<$Res>
       user: freezed == user
           ? _value.user
           : user // ignore: cast_nullable_to_non_nullable
-              as UserModel?,
+              as User?,
       isLoading: freezed == isLoading
           ? _value.isLoading
           : isLoading // ignore: cast_nullable_to_non_nullable
@@ -133,7 +133,7 @@ class _$UserStateImpl implements _UserState {
   const _$UserStateImpl({this.user, this.isLoading = false, this.authMethod});
 
   @override
-  final UserModel? user;
+  final User? user;
   @override
   @JsonKey()
   final bool? isLoading;
@@ -169,12 +169,12 @@ class _$UserStateImpl implements _UserState {
 
 abstract class _UserState implements UserState {
   const factory _UserState(
-      {final UserModel? user,
+      {final User? user,
       final bool? isLoading,
       final String? authMethod}) = _$UserStateImpl;
 
   @override
-  UserModel? get user;
+  User? get user;
   @override
   bool? get isLoading;
   @override

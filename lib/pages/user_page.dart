@@ -1,5 +1,4 @@
-import 'package:code_master/bloc/user_bloc/user_event.dart';
-import 'package:code_master/widgets/cm_appbar.dart';
+import 'package:iman/bloc/user_bloc/user_event.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
@@ -14,7 +13,6 @@ class UserPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const CmAppBar(),
       backgroundColor: Theme.of(context).colorScheme.background,
       body: SafeArea(
         child: Padding(

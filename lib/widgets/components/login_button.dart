@@ -1,5 +1,4 @@
-import 'package:code_master/bloc/user_bloc/user_state.dart';
-import 'package:easy_localization/easy_localization.dart';
+import 'package:iman/bloc/user_bloc/user_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
@@ -52,7 +51,7 @@ class _LoginButtonState extends State<LoginButton> {
                       color: Colors.white,
                     )
                   : Text(
-                      context.tr("loginButton"),
+                      "Login",
                       textAlign: TextAlign.center,
                       style: GoogleFonts.openSans(
                         fontSize: 18,

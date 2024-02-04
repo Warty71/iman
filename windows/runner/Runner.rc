@@ -90,12 +90,12 @@ BEGIN
         BLOCK "040904e4"
         BEGIN
             VALUE "CompanyName", "com.example" "\0"
-            VALUE "FileDescription", "code_master" "\0"
+            VALUE "FileDescription", "Iman" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "code_master" "\0"
+            VALUE "InternalName", "Iman" "\0"
             VALUE "LegalCopyright", "Copyright (C) 2023 com.example. All rights reserved." "\0"
-            VALUE "OriginalFilename", "code_master.exe" "\0"
-            VALUE "ProductName", "code_master" "\0"
+            VALUE "OriginalFilename", "iman.exe" "\0"
+            VALUE "ProductName", "Iman" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END

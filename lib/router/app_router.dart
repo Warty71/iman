@@ -1,8 +1,8 @@
 // The route configuration.
-import 'package:code_master/pages/auth_page.dart';
-import 'package:code_master/pages/home_page.dart';
-import 'package:code_master/pages/onboarding_page.dart';
-import 'package:code_master/pages/login_page.dart';
+import 'package:iman/pages/auth_page.dart';
+import 'package:iman/pages/home_page.dart';
+import 'package:iman/pages/onboarding_page.dart';
+import 'package:iman/pages/login_page.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import '../pages/cv_page.dart';

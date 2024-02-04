@@ -1,6 +1,6 @@
 // ignore_for_file: avoid_print
-import 'package:code_master/services/firebase_services/auth_services.dart';
-import 'package:code_master/managers/snackbar_manager.dart';
+import 'package:iman/services/auth_services.dart';
+import 'package:iman/managers/snackbar_manager.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
 enum AuthType { google, apple, linkedin, signOut }

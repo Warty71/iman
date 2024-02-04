@@ -1,7 +1,6 @@
-import 'package:code_master/bloc/user_bloc/user_event.dart';
-import 'package:code_master/bloc/user_bloc/user_state.dart';
-import 'package:code_master/widgets/components/login_tile.dart';
-import 'package:easy_localization/easy_localization.dart';
+import 'package:iman/bloc/user_bloc/user_event.dart';
+import 'package:iman/bloc/user_bloc/user_state.dart';
+import 'package:iman/widgets/components/login_tile.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -49,7 +48,7 @@ class _LoginPageState extends State<LoginPage> {
                     padding:
                         const EdgeInsets.symmetric(vertical: 5, horizontal: 25),
                     child: Text(
-                      context.tr("loginSubtitle"),
+                      "Subtitle",
                       textAlign: TextAlign.center,
                       style: GoogleFonts.openSans(
                         fontSize: 16,

@@ -1,8 +1,7 @@
 // ignore_for_file: avoid_print
 
-import 'package:code_master/bloc/user_bloc/user_state.dart';
-import 'package:code_master/widgets/cm_snake_bar.dart';
-import 'package:code_master/pages/login_page.dart';
+import 'package:iman/bloc/user_bloc/user_state.dart';
+import 'package:iman/pages/login_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -16,7 +15,11 @@ class AuthPage extends StatelessWidget {
     return BlocBuilder<UserBloc, UserState>(
       builder: (context, state) {
         if (state.user != null) {
-          return const CmSnakeBar();
+          return Scaffold(
+            body: Center(
+              child: Text("Welcome ${state.user!.username}"),
+            ),
+          );
         } else {
           return const LoginPage();
         }

@@ -1,11 +1,11 @@
 import 'package:bloc/bloc.dart';
-import 'package:code_master/bloc/user_bloc/user_event.dart';
-import 'package:code_master/bloc/user_bloc/user_state.dart';
-import 'package:code_master/handlers/firebase_handlers/database_handlers.dart';
-import 'package:code_master/managers/snackbar_manager.dart';
-import 'package:code_master/models/user_model/user_model.dart';
-import 'package:firebase_auth/firebase_auth.dart';
-import '../../handlers/firebase_handlers/auth_handlers.dart';
+import 'package:iman/bloc/user_bloc/user_event.dart';
+import 'package:iman/bloc/user_bloc/user_state.dart';
+import 'package:iman/handlers/auth_handler.dart';
+import 'package:iman/handlers/database_handler.dart';
+import 'package:iman/managers/snackbar_manager.dart';
+import 'package:iman/models/user_model/user.dart';
+import 'package:firebase_auth/firebase_auth.dart' as auth;
 
 class UserBloc extends Bloc<UserEvent, UserState> {
   final AuthHandler authHandler = AuthHandler();
@@ -13,8 +13,8 @@ class UserBloc extends Bloc<UserEvent, UserState> {
 
   UserBloc() : super(const UserState()) {
     on<UserEvent>((event, emit) async {
-      UserCredential? userCredential;
-      UserModel? user;
+      auth.UserCredential? userCredential;
+      User? user;
 
       try {
         switch (event) {

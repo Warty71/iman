@@ -1,11 +1,8 @@
-import 'package:code_master/bloc/network_bloc/network_bloc.dart';
-import 'package:code_master/bloc/network_bloc/network_event.dart';
-import 'package:code_master/bloc/user_bloc/user_bloc.dart';
-import 'package:code_master/constants/light_theme.dart';
-import 'package:code_master/firebase_options.dart';
-import 'package:code_master/router/app_router.dart';
-import 'package:code_master/managers/snackbar_manager.dart';
-import 'package:easy_localization/easy_localization.dart';
+import 'package:iman/bloc/user_bloc/user_bloc.dart';
+import 'package:iman/constants/light_theme.dart';
+import 'package:iman/firebase_options.dart';
+import 'package:iman/router/app_router.dart';
+import 'package:iman/managers/snackbar_manager.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -13,22 +10,13 @@ import 'package:go_router/go_router.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await EasyLocalization.ensureInitialized();
 
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
 
   runApp(
-    EasyLocalization(
-      supportedLocales: const [
-        Locale('en', 'EN'),
-        Locale('bs', "BS"),
-      ],
-      path: "assets/translations",
-      fallbackLocale: const Locale('bs', 'BS'),
-      child: const MyApp(),
-    ),
+    const MyApp(),
   );
 }
 
@@ -41,12 +29,6 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiBlocProvider(
       providers: [
-        BlocProvider(
-          create: (context) => NetworkBloc()
-            ..add(
-              NetworkObserve(),
-            ),
-        ),
         BlocProvider(
           create: (context) => UserBloc(),
         ),
@@ -73,10 +55,7 @@ class MyApp extends StatelessWidget {
             },
           );
         },
-        title: "Code Master",
-        localizationsDelegates: context.localizationDelegates,
-        supportedLocales: context.supportedLocales,
-        locale: context.locale,
+        title: "Iman",
         debugShowCheckedModeBanner: false,
         routerConfig: _router,
         theme: lightTheme,

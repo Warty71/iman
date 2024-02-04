@@ -1,5 +1,4 @@
-import 'package:code_master/widgets/components/intro_button.dart';
-import 'package:easy_localization/easy_localization.dart';
+import 'package:iman/widgets/components/intro_button.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -20,27 +19,10 @@ class OnboardingPage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    "CODE MASTER",
+                    "IMAN",
                     style: GoogleFonts.roadRage(
                       color: Theme.of(context).colorScheme.onBackground,
                       fontSize: 34,
-                    ),
-                  ),
-                  IconButton(
-                    onPressed: () {
-                      if (context.locale == const Locale("en", "EN")) {
-                        context.setLocale(
-                          const Locale("bs", "BS"),
-                        );
-                      } else if (context.locale == const Locale("bs", "BS"))
-                        // ignore: curly_braces_in_flow_control_structures
-                        context.setLocale(
-                          const Locale("en", "EN"),
-                        );
-                    },
-                    icon: Icon(
-                      Icons.language,
-                      color: Theme.of(context).colorScheme.onBackground,
                     ),
                   ),
                 ],
@@ -53,7 +35,7 @@ class OnboardingPage extends StatelessWidget {
 
               // * Title
               Text(
-                context.tr("introTitle"),
+                "Title",
                 textAlign: TextAlign.center,
                 style: GoogleFonts.roadRage(
                   color: Theme.of(context).colorScheme.onBackground,
@@ -63,7 +45,7 @@ class OnboardingPage extends StatelessWidget {
 
               // * Subtitle
               Text(
-                context.tr("introSubtitle"),
+                "Subtitle",
                 textAlign: TextAlign.center,
                 style: GoogleFonts.roadRage(
                   color: Theme.of(context).colorScheme.onBackground,
@@ -77,8 +59,8 @@ class OnboardingPage extends StatelessWidget {
               ),
 
               // * Button - Continue
-              IntroButton(
-                text: context.tr("introButton"),
+              const IntroButton(
+                text: "Continue",
               ),
 
               const SizedBox(
